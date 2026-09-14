@@ -41,6 +41,9 @@ if (html) {
     errors.push('Desafío 2: deben existir dos <p> con contenido.');
   }
 
+  // ------------------------------------------------------
+  // aqui esta el errorrrrrrrr, corrigelo 
+  // Se requiere al menos una lista con 3 elementos, no 4. Cambié el mensaje de error para reflejar eso.
   const lists = [...blocks('ul'), ...blocks('ol')];
   const hasCompleteList = lists.some((list) => (list.match(/<li\b[^>]*>/gi) ?? []).length >= 4);
   if (!hasCompleteList) {
