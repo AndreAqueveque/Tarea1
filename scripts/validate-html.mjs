@@ -37,8 +37,8 @@ if (html) {
   }
 
   const paragraphs = blocks('p');
-  if (!paragraphs.some((paragraph) => visibleText(paragraph))) {
-    errors.push('Desafío 2: debe existir un <p> con contenido.');
+  if (paragraphs.filter((paragraph) => visibleText(paragraph)).length < 2) {
+    errors.push('Desafío 2: deben existir dos <p> con contenido.');
   }
 
   const lists = [...blocks('ul'), ...blocks('ol')];
