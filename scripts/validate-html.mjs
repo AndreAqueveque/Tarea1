@@ -42,7 +42,7 @@ if (html) {
   }
 
   const lists = [...blocks('ul'), ...blocks('ol')];
-  const hasCompleteList = lists.some((list) => (list.match(/<li\b[^>]*>/gi) ?? []).length >= 4);
+  const hasCompleteList = lists.some((list) => (list.match(/<li\b[^>]*>/gi) ?? []).length >= 3);
   if (!hasCompleteList) {
     errors.push('Desafío 3: debe existir una lista <ul> u <ol> con al menos 3 <li>.');
   }
