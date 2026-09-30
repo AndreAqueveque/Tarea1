@@ -45,7 +45,7 @@ if (html) {
   // aqui esta el errorrrrrrrr, corrigelo 
   // Se requiere al menos una lista con 3 elementos, no 4. Cambié el mensaje de error para reflejar eso.
   const lists = [...blocks('ul'), ...blocks('ol')];
-  const hasCompleteList = lists.some((list) => (list.match(/<li\b[^>]*>/gi) ?? []).length >= 4);
+  const hasCompleteList = lists.some((list) => (list.match(/<li\b[^>]*>/gi) ?? []).length >= 3);
   if (!hasCompleteList) {
     errors.push('Desafío 3: debe existir una lista <ul> u <ol> con al menos 3 <li>.');
   }
